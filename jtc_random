@@ -1,0 +1,23 @@
+import random
+# Original lists of actions, objects, and people
+original_actions = ["jump on", "sit on", "stomp on", "throw salt on",
+"dance on", "lick", "kick", "sniff"]
+original_objects = ["your cat", "your dog", "your neighbor", "your dad's car", "your mom's car", "a telephone pole", "a refrigerator"]
+original_people = ["your mom", "your dad", "your best friend", "your teacher", "the president of the United States", "your boss", "your pet"]
+# Function to generate a dare
+def generate_dare(actions, objects, people):
+    dare = "I dare you to " + random.choice(actions) + " " + random.choice(objects) + " in front of " + random.choice(people);return dare
+# Exercise prompt
+print("Welcome to the Dare Generator Exercise!")
+print("You have the opportunity to customize the actions, objects, and people in the dare generator.")
+print("After customizing, you'll generate your own dare.")
+print()
+# Prompt for user input to customize the lists
+actions_input = input("Enter a list of actions separated by commas (e.g., jump, dance, sing): ").split(",")
+objects_input = input("Enter a list of objects separated by commas (e.g., cat, car, tree): ").split(",")
+people_input = input("Enter a list of people separated by commas (e.g., friend, teacher, celebrity): ").split(",")
+# Generate a dare using the customized lists
+custom_dare = generate_dare(actions_input, objects_input, people_input)
+# Print the customized dare for the user
+print("Your customized dare is:")
+print(custom_dare)
